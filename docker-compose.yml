@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+
+  ghost:
+    image: ghost:1-alpine
+    restart: always
+    ports:
+    - 8080:2368
+    env_file:
+    - ghost.env
+
+  adminer:
+    image: adminer
+    restart: always
+    ports: 
+    - 8070:8080
+        
